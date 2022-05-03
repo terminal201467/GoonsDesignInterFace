@@ -10,8 +10,6 @@
 		973CC12F2821055D000BC317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC12E2821055D000BC317 /* AppDelegate.swift */; };
 		973CC1312821055D000BC317 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1302821055D000BC317 /* SceneDelegate.swift */; };
 		973CC1332821055D000BC317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1322821055D000BC317 /* ViewController.swift */; };
-		973CC1362821055D000BC317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973CC1342821055D000BC317 /* Main.storyboard */; };
-		973CC1392821055D000BC317 /* GoonsDesignInterface.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1372821055D000BC317 /* GoonsDesignInterface.xcdatamodeld */; };
 		973CC13B2821055F000BC317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973CC13A2821055F000BC317 /* Assets.xcassets */; };
 		973CC13E2821055F000BC317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973CC13C2821055F000BC317 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -21,8 +19,6 @@
 		973CC12E2821055D000BC317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		973CC1302821055D000BC317 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		973CC1322821055D000BC317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		973CC1352821055D000BC317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		973CC1382821055D000BC317 /* GoonsDesignInterface.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoonsDesignInterface.xcdatamodel; sourceTree = "<group>"; };
 		973CC13A2821055F000BC317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		973CC13D2821055F000BC317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973CC13F2821055F000BC317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,11 +57,9 @@
 				973CC12E2821055D000BC317 /* AppDelegate.swift */,
 				973CC1302821055D000BC317 /* SceneDelegate.swift */,
 				973CC1322821055D000BC317 /* ViewController.swift */,
-				973CC1342821055D000BC317 /* Main.storyboard */,
 				973CC13A2821055F000BC317 /* Assets.xcassets */,
 				973CC13C2821055F000BC317 /* LaunchScreen.storyboard */,
 				973CC13F2821055F000BC317 /* Info.plist */,
-				973CC1372821055D000BC317 /* GoonsDesignInterface.xcdatamodeld */,
 			);
 			path = GoonsDesignInterface;
 			sourceTree = "<group>";
@@ -130,7 +124,6 @@
 			files = (
 				973CC13E2821055F000BC317 /* LaunchScreen.storyboard in Resources */,
 				973CC13B2821055F000BC317 /* Assets.xcassets in Resources */,
-				973CC1362821055D000BC317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +136,6 @@
 			files = (
 				973CC1332821055D000BC317 /* ViewController.swift in Sources */,
 				973CC12F2821055D000BC317 /* AppDelegate.swift in Sources */,
-				973CC1392821055D000BC317 /* GoonsDesignInterface.xcdatamodeld in Sources */,
 				973CC1312821055D000BC317 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		973CC1342821055D000BC317 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				973CC1352821055D000BC317 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		973CC13C2821055F000BC317 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,19 +348,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		973CC1372821055D000BC317 /* GoonsDesignInterface.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				973CC1382821055D000BC317 /* GoonsDesignInterface.xcdatamodel */,
-			);
-			currentVersion = 973CC1382821055D000BC317 /* GoonsDesignInterface.xcdatamodel */;
-			path = GoonsDesignInterface.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 973CC1232821055D000BC317 /* Project object */;
 }
