@@ -33,6 +33,8 @@ class View: UIView {
     private func autoLayout(){
         button.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.width.equalTo(70)
+            make.height.equalTo(30)
         }
         
     }

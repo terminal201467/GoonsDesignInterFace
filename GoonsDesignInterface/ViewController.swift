@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @objc func pushNextPage(){
-        
+        navigationController?.pushViewController(GoonsDesignViewController(), animated: true)
     }
 
 
