@@ -15,6 +15,7 @@
 		973CC14628210605000BC317 /* GoonsDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC14528210605000BC317 /* GoonsDesignViewController.swift */; };
 		973CC1482821085C000BC317 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1472821085C000BC317 /* View.swift */; };
 		973CC14A2821087E000BC317 /* GoonDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1492821087E000BC317 /* GoonDesignView.swift */; };
+		973CC14D28210A9B000BC317 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 973CC14C28210A9B000BC317 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973CC14D28210A9B000BC317 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = GoonsDesignInterface;
+			packageProductDependencies = (
+				973CC14C28210A9B000BC317 /* SnapKit */,
+			);
 			productName = GoonsDesignInterface;
 			productReference = 973CC12B2821055D000BC317 /* GoonsDesignInterface.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 973CC1222821055D000BC317;
+			packageReferences = (
+				973CC14B28210A9B000BC317 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 973CC12C2821055D000BC317 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		973CC14B28210A9B000BC317 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		973CC14C28210A9B000BC317 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 973CC14B28210A9B000BC317 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 973CC1232821055D000BC317 /* Project object */;
 }
