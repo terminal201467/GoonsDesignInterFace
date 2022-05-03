@@ -13,6 +13,8 @@
 		973CC13B2821055F000BC317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 973CC13A2821055F000BC317 /* Assets.xcassets */; };
 		973CC13E2821055F000BC317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 973CC13C2821055F000BC317 /* LaunchScreen.storyboard */; };
 		973CC14628210605000BC317 /* GoonsDesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC14528210605000BC317 /* GoonsDesignViewController.swift */; };
+		973CC1482821085C000BC317 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1472821085C000BC317 /* View.swift */; };
+		973CC14A2821087E000BC317 /* GoonDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973CC1492821087E000BC317 /* GoonDesignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		973CC13D2821055F000BC317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		973CC13F2821055F000BC317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		973CC14528210605000BC317 /* GoonsDesignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoonsDesignViewController.swift; sourceTree = "<group>"; };
+		973CC1472821085C000BC317 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		973CC1492821087E000BC317 /* GoonDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoonDesignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				973CC12E2821055D000BC317 /* AppDelegate.swift */,
 				973CC1302821055D000BC317 /* SceneDelegate.swift */,
 				973CC1322821055D000BC317 /* ViewController.swift */,
+				973CC1472821085C000BC317 /* View.swift */,
 				973CC14528210605000BC317 /* GoonsDesignViewController.swift */,
+				973CC1492821087E000BC317 /* GoonDesignView.swift */,
 				973CC13A2821055F000BC317 /* Assets.xcassets */,
 				973CC13C2821055F000BC317 /* LaunchScreen.storyboard */,
 				973CC13F2821055F000BC317 /* Info.plist */,
@@ -139,8 +145,10 @@
 			files = (
 				973CC1332821055D000BC317 /* ViewController.swift in Sources */,
 				973CC14628210605000BC317 /* GoonsDesignViewController.swift in Sources */,
+				973CC1482821085C000BC317 /* View.swift in Sources */,
 				973CC12F2821055D000BC317 /* AppDelegate.swift in Sources */,
 				973CC1312821055D000BC317 /* SceneDelegate.swift in Sources */,
+				973CC14A2821087E000BC317 /* GoonDesignView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
