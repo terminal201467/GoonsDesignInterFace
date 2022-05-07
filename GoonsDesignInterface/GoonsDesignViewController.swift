@@ -17,10 +17,23 @@ class GoonsDesignViewController:UIViewController{
         view = goonDesignView
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setNavigationBar()
+        setScrollView()
     }
+    
+    private func setNavigationBar(){
+        title = "果思設計"
+        navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+    }
+    
+    private func setScrollView(){
+        goonDesignView.scrollView.delegate = self
+    }
+}
+
+extension GoonsDesignViewController:UIScrollViewDelegate{
+    
     
 }

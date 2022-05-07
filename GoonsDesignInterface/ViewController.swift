@@ -24,11 +24,13 @@ class ViewController: UIViewController {
     }
     
     private func setNavigationBar(){
+        navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icons8-back-24")
+//        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "icons8-back-24")
         
     }
     
     private func setButton(){
-        firstPageView.button.addTarget(self, action: #selector(pushNextPage), for: .allEvents)
+        firstPageView.button.addTarget(self, action: #selector(pushNextPage), for: .touchDown)
     }
     
     @objc func pushNextPage(){
