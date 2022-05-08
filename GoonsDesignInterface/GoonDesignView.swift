@@ -36,9 +36,8 @@ class GoonDesignView: UIView {
     let redView:UIView = {
        let view = UIView()
         view.backgroundColor = .red
-//        view.layer.backgroundColor = .init(red: 1, green: 0, blue: 0, alpha: 0)
+        view.layer.cornerRadius = 35
         view.layer.maskedCorners = [.layerMaxXMinYCorner]
-//        view.roundCorners(corners: .topRight, radius: 15)
         view.layer.masksToBounds = true
         view.clipsToBounds = true
         return view
@@ -84,7 +83,7 @@ class GoonDesignView: UIView {
         
         iOSAPPTitle.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview()
         }
         
         redView.snp.makeConstraints { make in

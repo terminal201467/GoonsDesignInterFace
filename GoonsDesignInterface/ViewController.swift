@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     private func setNavigationBar(){
         title = "第一頁"
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icons8-back-24")
-//        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "icons8-back-24")
         
     }
     

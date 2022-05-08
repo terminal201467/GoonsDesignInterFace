@@ -40,21 +40,26 @@ class GoonsDesignViewController:UIViewController{
     private func setScrollView(){
         goonDesignView.scrollView.delegate = self
     }
+    
+    private func setAlphaValue(_ position:CGFloat){
+        switch position{
+        case -140 ... -125: navigationController?.navigationBar.alpha = 0.1
+        case -125 ... -110: navigationController?.navigationBar.alpha = 0.2
+        case -110 ... -95:  navigationController?.navigationBar.alpha = 0.3
+        case -95 ... -80:   navigationController?.navigationBar.alpha = 0.4
+        case -80 ... -65:   navigationController?.navigationBar.alpha = 0.5
+        case -65 ... -50:   navigationController?.navigationBar.alpha = 0.6
+        case -50 ... -35:   navigationController?.navigationBar.alpha = 0.7
+        case -35 ... -20:   navigationController?.navigationBar.alpha = 0.8
+        case -20 ... -5:    navigationController?.navigationBar.alpha = 0.8
+        default:            navigationController?.navigationBar.alpha = 1
+        }
+    }
 }
 
 extension GoonsDesignViewController:UIScrollViewDelegate{
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let yPosition = scrollView.contentOffset.y
-        print("position:",yPosition)
-        switch yPosition{
-        case -140 ... -120: navigationController?.navigationBar.alpha = 0.25
-        case -120 ... -100:  navigationController?.navigationBar.alpha = 0.35
-        case -100 ... -90:   navigationController?.navigationBar.alpha = 0.45
-        case -90 ... -70:   navigationController?.navigationBar.alpha = 0.55
-        case -70 ... -50:   navigationController?.navigationBar.alpha = 0.65
-        case -50 ... -30:   navigationController?.navigationBar.alpha = 0.75
-        case -30 ... -10:   navigationController?.navigationBar.alpha = 0.85
-        default:            navigationController?.navigationBar.alpha = 1
-        }
+        setAlphaValue(yPosition)
     }
 }
