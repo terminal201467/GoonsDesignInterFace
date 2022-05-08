@@ -25,9 +25,16 @@ class GoonsDesignViewController:UIViewController{
     
     private func setNavigationBar(){
         title = "果思設計"
+        let backButton = UIBarButtonItem(image: UIImage(named: "icons8-back-24"), style: .plain, target: self, action: #selector(back))
+        backButton.tintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor.white.withAlphaComponent(20)
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func back(){
+            self.navigationController?.popViewController(animated: true)
     }
     
     private func setScrollView(){
@@ -36,10 +43,6 @@ class GoonsDesignViewController:UIViewController{
 }
 
 extension GoonsDesignViewController:UIScrollViewDelegate{
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        print("開始滑動")
-    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let yPosition = scrollView.contentOffset.y
         print("position:",yPosition)
@@ -53,16 +56,5 @@ extension GoonsDesignViewController:UIScrollViewDelegate{
         case -30 ... -10:   navigationController?.navigationBar.alpha = 0.85
         default:            navigationController?.navigationBar.alpha = 1
         }
-
-        //一開始的狀態，alpha值為
-        
-        //滑動中的狀態，alpha值跟著scrollView.contentOffset變化
-        
-        //滑動到一定的程度，就讓navigationBar消失
-    }
-    
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        print("結束滑動")
-        
     }
 }
