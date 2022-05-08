@@ -51,7 +51,7 @@ class GoonsDesignViewController:UIViewController{
         case -65 ... -50:   navigationController?.navigationBar.alpha = 0.6
         case -50 ... -35:   navigationController?.navigationBar.alpha = 0.7
         case -35 ... -20:   navigationController?.navigationBar.alpha = 0.8
-        case -20 ... -5:    navigationController?.navigationBar.alpha = 0.8
+        case -20 ... -5:    navigationController?.navigationBar.alpha = 0.9
         default:            navigationController?.navigationBar.alpha = 1
         }
     }

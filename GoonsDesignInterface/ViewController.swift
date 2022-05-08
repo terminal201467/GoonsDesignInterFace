@@ -20,13 +20,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setNavigationBar()
         setButton()
-        // Do any additional setup after loading the view.
     }
     
     private func setNavigationBar(){
         title = "第一頁"
         navigationController?.navigationBar.backIndicatorImage = UIImage(named: "icons8-back-24")
-        
     }
     
     private func setButton(){
