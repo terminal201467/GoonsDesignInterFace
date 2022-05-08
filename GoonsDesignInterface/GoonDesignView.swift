@@ -9,7 +9,7 @@ import UIKit
 
 class GoonDesignView: UIView {
     
-    let dogPicture:UIImageView = {
+    private let dogPicture:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "dog")
         imageView.contentMode = .scaleAspectFit
@@ -17,7 +17,7 @@ class GoonDesignView: UIView {
         return imageView
     }()
     
-    let goonsTitle:UILabel = {
+    private let goonsTitle:UILabel = {
        let label = UILabel()
         label.text = "果思設計"
         label.textColor = .white
@@ -25,7 +25,7 @@ class GoonDesignView: UIView {
         return label
     }()
     
-    let iOSAPPTitle:UILabel = {
+    private let iOSAPPTitle:UILabel = {
         let label = UILabel()
         label.text = "iOSAPP"
         label.textColor = .white
@@ -36,13 +36,17 @@ class GoonDesignView: UIView {
     let redView:UIView = {
        let view = UIView()
         view.backgroundColor = .red
-        view.roundCorners(corners:.topRight, radius: 15)
+//        view.layer.backgroundColor = .init(red: 1, green: 0, blue: 0, alpha: 0)
+        view.layer.maskedCorners = [.layerMaxXMinYCorner]
+//        view.roundCorners(corners: .topRight, radius: 15)
+        view.layer.masksToBounds = true
+        view.clipsToBounds = true
         return view
     }()
     
     let scrollView:UIScrollView = {
        let scrollView = UIScrollView()
-        scrollView.backgroundColor = .red
+        scrollView.backgroundColor = .white
         scrollView.isScrollEnabled = true
         scrollView.showsHorizontalScrollIndicator = true
         return scrollView
@@ -53,9 +57,8 @@ class GoonDesignView: UIView {
         backgroundColor = .white
         addSubview(scrollView)
         scrollView.addSubview(dogPicture)
-        scrollView.addSubview(redView)
-        scrollView.addSubview(goonsTitle)
         scrollView.addSubview(iOSAPPTitle)
+        scrollView.addSubview(redView)
         autoLayout()
     }
     
@@ -73,34 +76,32 @@ class GoonDesignView: UIView {
         }
         
         dogPicture.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(-120)
+            make.top.equalToSuperview().offset(-170)
             make.centerX.equalToSuperview()
             make.height.equalTo(300)
             make.width.equalToSuperview()
         }
         
-        goonsTitle.snp.makeConstraints { make in
+        iOSAPPTitle.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(5)
         }
         
-        iOSAPPTitle.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalTo(goonsTitle.snp.bottom).offset(5)
-        }
-        
         redView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(250)
+            make.top.equalTo(scrollView.snp.top).offset(80)
             make.right.left.equalToSuperview()
-            make.bottom.equalToSuperview()
             make.height.equalTo(900)
+            make.width.equalToSuperview()
+            make.bottom.equalTo(scrollView.snp.bottom)
         }
     }
 }
 
 extension UIView {
    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let path = UIBezierPath(roundedRect: bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         layer.mask = mask
